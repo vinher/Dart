@@ -7,6 +7,10 @@ main() {
   booleanos();
   print("Listas Dart");
   listasDart();
+  print("Sets");
+  sets();
+  print("Mapas");
+  mapas();
 }
 //Tipados De Datos Númericos
 
@@ -43,7 +47,7 @@ booleanos(){
 }
 
 listasDart(){
-  List<String> nombres =["Caro","Kevin","Ulises"];
+  List<String> nombres =["Deivis","Kevin","Ulises"];
   print(nombres);
   print(nombres[0]);
   nombres[1]="Hernandez";
@@ -51,9 +55,21 @@ listasDart(){
 }
 
 sets(){
-  var villanos ={
+  //Los Sets No tienen Duplicados
+  Set <String> villanos ={"Deivis","Kevin","Ulises"};
+  print(villanos);
+}
 
+mapas(){
+  //Diccionarios 
+  Map<String,dynamic> user = {
+    'name':'Kevin',
+    'edad':27,
+    'estatura':1.70
   };
+
+  print(user);
+  print(user['edad']);
 }
 
 
