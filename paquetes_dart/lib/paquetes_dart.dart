@@ -6,7 +6,10 @@ void main(List<String> arguments) async {
   http.get(url).then((res) {
     final resp = responseDataFromJson(res.body);
     //Desestrtuctures Objetos
-    print(resp.data[0].email);
-    print(resp.page);
+    for (int i = 1; i < resp.data.length; i++) {
+            print("Email: ${ resp.data[i].email}, user: ${ resp.data[i].firstName} ${resp.data[i].lastName} ");
+    }
+
+
   });
 }
